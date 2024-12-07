@@ -11,7 +11,7 @@ dotenv.config({path:path.join(__dirname,"config","config.env")})
 mongodbConnection();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://saptravel-frontend-deploy.vercel.app/',
     credentials: true
 }));
 
