@@ -1,0 +1,607 @@
+[{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a3"
+  },
+  "carModel": "Hutch Back",
+  "pricePerday": {
+    "0-400": {
+      "price": 1300,
+      "kmCharge": 8
+    },
+    ">400": {
+      "kmCharge": 11,
+      "driverBeta": 400
+    }
+  },
+  "seats": 4,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Compact car, perfect for short trips with minimal luggage.",
+  "category": "Outstation",
+  "updatedAt": {
+    "$date": "2024-10-14T12:15:33.475Z"
+  },
+  "brand": "Tata Indica"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a4"
+  },
+  "carModel": "Sedan",
+  "pricePerday": {
+    "0-400": {
+      "price": 2000,
+      "kmCharge": 10
+    },
+    ">400": {
+      "kmCharge": 14,
+      "driverBeta": 400
+    }
+  },
+  "seats": 4,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Comfortable sedan for city and intercity travel.",
+  "category": "Outstation",
+  "brand": "Toyota Etios or Swift Dzire"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a2"
+  },
+  "carModel": "20 Seat Ac Van",
+  "localTripType": {
+    "Day-Use": {
+      "perDayRent": 12500,
+      "freeKm": 200,
+      "extraKmCharge": 35
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Local Trip"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb29799"
+  },
+  "carModel": "TT Executive Van",
+  "pricePerKm": {
+    "0-25": {
+      "price": 2200,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 2200
+    },
+    "26-50": {
+      "price": 3500,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 3500
+    },
+    "51-75": {
+      "price": 77,
+      "additionalInfo": "/KM"
+    },
+    "76-100": {
+      "price": 66,
+      "additionalInfo": "/KM"
+    },
+    "101-150": {
+      "price": 56,
+      "additionalInfo": "/KM"
+    },
+    "151-200": {
+      "price": 50,
+      "additionalInfo": "/KM"
+    },
+    "201-250": {
+      "price": 23,
+      "additionalInfo": "/KM"
+    },
+    ">300": {
+      "price": 22,
+      "additionalInfo": "/KM +1000 MF"
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Mini-bus suitable for large groups.",
+  "category": "Drop Trip",
+  "brand": "Tempo Travellers"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb29797"
+  },
+  "carModel": "SUV 7pax + 1",
+  "pricePerKm": {
+    "0-25": {
+      "price": 1800,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 1800
+    },
+    "26-50": {
+      "price": 2500,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 2500
+    },
+    "51-75": {
+      "price": 63,
+      "additionalInfo": "/KM"
+    },
+    "76-100": {
+      "price": 55,
+      "additionalInfo": "/KM"
+    },
+    "101-150": {
+      "price": 48,
+      "additionalInfo": "/KM"
+    },
+    "151-200": {
+      "price": 42,
+      "additionalInfo": "/KM"
+    },
+    "201-250": {
+      "price": 38,
+      "additionalInfo": "/KM"
+    },
+    ">300": {
+      "price": 36,
+      "additionalInfo": "/KM +800 MF"
+    }
+  },
+  "seats": 7,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Spacious SUV, ideal for long journeys with a larger group.",
+  "category": "Drop Trip",
+  "brand": "Toyoto Innova"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb29798"
+  },
+  "carModel": "SUV 8pax + 1",
+  "pricePerKm": {
+    "0-25": {
+      "price": 1800,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 1800
+    },
+    "26-50": {
+      "price": 2500,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 2500
+    },
+    "51-75": {
+      "price": 63,
+      "additionalInfo": "/KM"
+    },
+    "76-100": {
+      "price": 55,
+      "additionalInfo": "/KM"
+    },
+    "101-150": {
+      "price": 48,
+      "additionalInfo": "/KM"
+    },
+    "151-200": {
+      "price": 42,
+      "additionalInfo": "/KM"
+    },
+    "201-250": {
+      "price": 38,
+      "additionalInfo": "/KM"
+    },
+    ">300": {
+      "price": 36,
+      "additionalInfo": "/KM +800 MF"
+    }
+  },
+  "seats": 8,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Extra spacious SUV for even larger groups.",
+  "category": "Drop Trip",
+  "brand": "Toyoto Innova"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb2979a"
+  },
+  "carModel": "TT AC Executive Van",
+  "pricePerKm": {
+    "0-25": {
+      "price": 2500,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 2500
+    },
+    "26-50": {
+      "price": 4500,
+      "additionalInfo": "* FOR BEST DEAL CALL US",
+      "totalFare": 4500
+    },
+    "51-75": {
+      "price": 87,
+      "additionalInfo": "/KM"
+    },
+    "76-100": {
+      "price": 74,
+      "additionalInfo": "/KM"
+    },
+    "101-150": {
+      "price": 64,
+      "additionalInfo": "/KM"
+    },
+    "151-200": {
+      "price": 57,
+      "additionalInfo": "/KM"
+    },
+    "201-250": {
+      "price": 27,
+      "additionalInfo": "/KM"
+    },
+    ">300": {
+      "price": 26,
+      "additionalInfo": "/KM +1000 MF"
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Drop Trip",
+  "brand": "Tempo Traveller"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a0"
+  },
+  "carModel": "TT AC Executive Van",
+  "localTripType": {
+    "Hour-Basis": {
+      "minCharge": 2000,
+      "extraHourCharge": 1000,
+      "extraKmCharge": 40
+    },
+    "Day-Use": {
+      "perDayRent": 5500,
+      "freeKm": 100,
+      "extraKmCharge": 18
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Local Trip",
+  "brand": "Tempo Traveller"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297aa"
+  },
+  "carModel": "20 Seat Ac Van",
+  "pricePerday": {
+    "0-400": {
+      "price": 12500,
+      "basekm": 200,
+      "kmCharge": 35
+    },
+    ">400": {
+      "kmCharge": 45,
+      "driverBeta": 600
+    }
+  },
+  "seats": 20,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Outstation"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb29796"
+  },
+  "carModel": "Sedan",
+  "pricePerKm": {
+    "0-25": {
+      "price": 30,
+      "additionalInfo": "/KM +100 MF"
+    },
+    "26-50": {
+      "price": 35,
+      "additionalInfo": "/KM +200 MF"
+    },
+    "51-75": {
+      "price": 35,
+      "additionalInfo": "/KM +300 MF"
+    },
+    "76-100": {
+      "price": 36
+    },
+    "101-150": {
+      "price": 32
+    },
+    "151-200": {
+      "price": 28
+    },
+    "201-250": {
+      "price": 28
+    },
+    ">300": {
+      "price": 26,
+      "additionalInfo": "/KM +800 MF"
+    }
+  },
+  "seats": 4,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Comfortable sedan for city and intercity travel.",
+  "category": "Drop Trip",
+  "brand": "Toyota Etios or Swift Dzire"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a7"
+  },
+  "carModel": "TT Executive Van",
+  "pricePerday": {
+    "0-400": {
+      "price": 3200,
+      "kmCharge": 16
+    },
+    ">400": {
+      "kmCharge": 22,
+      "driverBeta": 500
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Mini-bus suitable for large groups.",
+  "category": "Outstation",
+  "brand": "Tempo Traveller"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a8"
+  },
+  "carModel": "TT AC Executive Van",
+  "pricePerday": {
+    "0-400": {
+      "price": 3700,
+      "kmCharge": 20
+    },
+    ">400": {
+      "kmCharge": 27,
+      "driverBeta": 500
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Outstation",
+  "brand": "Tempo Traveller"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb2979c"
+  },
+  "carModel": "Sedan",
+  "localTripType": {
+    "Hour-Basis": {
+      "minCharge": 700,
+      "extraHourCharge": 350,
+      "extraKmCharge": 18
+    },
+    "Day-Use": {
+      "perDayRent": 2700,
+      "freeKm": 100,
+      "extraKmCharge": 10
+    }
+  },
+  "seats": 4,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Comfortable sedan for city and intercity travel.",
+  "category": "Local Trip",
+  "brand": "Toyota Etios or Swift Dzire"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a6"
+  },
+  "carModel": "SUV Premium Crysta",
+  "pricePerday": {
+    "0-400": {
+      "price": 3200,
+      "kmCharge": 16
+    },
+    ">400": {
+      "kmCharge": 21,
+      "driverBeta": 500
+    }
+  },
+  "seats": 8,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Extra spacious SUV for even larger groups.",
+  "category": "Outstation",
+  "brand": "Innova Crysta"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a1"
+  },
+  "carModel": "20 Seat Van",
+  "localTripType": {
+    "Day-Use": {
+      "perDayRent": 5700,
+      "freeKm": 100,
+      "extraKmCharge": 20
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Local Trip"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb2979d"
+  },
+  "carModel": "SUV 7pax + 1",
+  "localTripType": {
+    "Hour-Basis": {
+      "minCharge": 1200,
+      "extraHourCharge": 450,
+      "extraKmCharge": 22
+    },
+    "Day-Use": {
+      "perDayRent": 4000,
+      "freeKm": 100,
+      "extraKmCharge": 14
+    }
+  },
+  "seats": 7,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Spacious SUV, ideal for long journeys with a larger group.",
+  "category": "Local Trip",
+  "brand": "Toyoto Innova"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb2979f"
+  },
+  "carModel": "TT Executive Van",
+  "localTripType": {
+    "Hour-Basis": {
+      "minCharge": 1500,
+      "extraHourCharge": 800,
+      "extraKmCharge": 32
+    },
+    "Day-Use": {
+      "perDayRent": 4800,
+      "freeKm": 100,
+      "extraKmCharge": 16
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Mini-bus suitable for large groups.",
+  "category": "Local Trip",
+  "brand": "Tempo Traveller"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a5"
+  },
+  "carModel": "SUV 7pax + 1",
+  "pricePerday": {
+    "0-400": {
+      "price": 2500,
+      "kmCharge": 15
+    },
+    ">400": {
+      "kmCharge": 19,
+      "driverBeta": 400
+    }
+  },
+  "seats": 7,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Spacious SUV, ideal for long journeys with a larger group.",
+  "category": "Outstation",
+  "brand": "Toyoto Innova"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb29795"
+  },
+  "carModel": "Hutch Back",
+  "pricePerKm": {
+    "0-25": {
+      "price": 25,
+      "additionalInfo": "/KM +100 MF"
+    },
+    "26-50": {
+      "price": 35,
+      "additionalInfo": "/KM +100 MF"
+    },
+    "51-75": {
+      "price": 35,
+      "additionalInfo": "/KM +300 MF"
+    },
+    "76-100": {
+      "price": 35
+    },
+    "101-150": {
+      "price": 32
+    },
+    "151-200": {
+      "price": 28
+    },
+    "201-250": {
+      "price": 28
+    },
+    ">300": {
+      "price": 26,
+      "additionalInfo": "/KM +800 MF"
+    }
+  },
+  "seats": 4,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Compact car, perfect for short trips with minimal luggage.",
+  "category": "Drop Trip",
+  "updatedAt": {
+    "$date": "2024-10-14T04:44:17.444Z"
+  },
+  "brand": "Tata Indica"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb2979e"
+  },
+  "carModel": "Suv-Premium-Crysta",
+  "localTripType": {
+    "Day-Use": {
+      "perDayRent": 4700,
+      "freeKm": 100,
+      "extraKmCharge": 16
+    }
+  },
+  "seats": 14,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Mini-bus suitable for large groups.",
+  "category": "Local Trip"
+},
+{
+  "_id": {
+    "$oid": "66fbd80942d4dd5bdcb297a9"
+  },
+  "carModel": "20 Seat Van",
+  "pricePerday": {
+    "0-400": {
+      "price": 4000,
+      "kmCharge": 20
+    },
+    ">400": {
+      "kmCharge": 27,
+      "driverBeta": 600
+    }
+  },
+  "seats": 20,
+  "availability": true,
+  "imageUrl": "./images/car.avif",
+  "description": "Air-conditioned mini-bus for long trips in comfort.",
+  "category": "Outstation"
+}]

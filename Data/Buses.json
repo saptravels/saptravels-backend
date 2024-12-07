@@ -1,0 +1,45 @@
+[
+    {
+      "carModel": "Model S",
+      "brand": "Tesla",
+      "price": 150,
+      "seats": 5,
+      "availability": true,
+      "imageUrl": "./images/car.avif",
+      "description": "A premium electric sedan with autopilot features.",
+      "category": "Outstation"
+    },
+    {
+      "carModel": "Civic",
+      "brand": "Honda",
+      "price": 75,
+      "seats": 5,
+      "availability": true,
+      "imageUrl": "./images/car.avif",
+      "description": "A reliable and fuel-efficient sedan.",
+      "category": "Local Trip"
+    },
+    {
+      "carModel": "Mustang",
+      "brand": "Ford",
+      "price": 120,
+      "seats": 4,
+      "availability": false,
+      "imageUrl": "./images/car.avif",
+      "description": "A classic American muscle car with powerful performance.",
+      "category": "Drop Trip"
+    },
+    {
+      "carModel": "Camry",
+      "brand": "Toyota",
+      "price": 85,
+      "seats": 5,
+      "availability": true,
+      "imageUrl": "./images/car.avif",
+      "description": "A spacious and comfortable sedan, perfect for family trips.",
+      "category": "Round Trip"
+    }
+  ]
+
+  
+  

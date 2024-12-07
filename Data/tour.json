@@ -1,0 +1,11 @@
+[{
+    "name": "Himalayan Adventure",
+    "numberOfPersons": 10,
+    "imageUrl": "./images/car.avif",
+    "services": [
+        { "name": "Trekking" },
+        { "name": "Camping" },
+        { "name": "Local cuisine experience" }
+    ],
+    "category": ["Adventure", "Nature", "Mountains"]
+}]

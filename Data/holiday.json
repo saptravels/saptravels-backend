@@ -1,0 +1,10 @@
+[{
+    "name": "Beach Paradise",
+    "imageUrl": "./images/car.avif",
+    "services": [
+        { "name": "All-inclusive resort" },
+        { "name": "Guided tours" },
+        { "name": "Airport transfer" }
+    ],
+    "category": ["Beach", "Family", "Luxury"]
+}]
