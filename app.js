@@ -9,10 +9,9 @@ const cors= require('cors');
 
 dotenv.config({path:path.join(__dirname,"config","config.env")})
 mongodbConnection();
-
 app.use(cors({
-    origin: 'https://saptravel-frontend-deploy.vercel.app',
-    credentials: true
+    origin: '*', // Allows requests from all origins
+    credentials: true // Note: 'credentials' may not work with '*'
 }));
 
 app.get('/hello', (req, res) => {
