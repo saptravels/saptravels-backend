@@ -3,22 +3,8 @@ const holidayModel = require('../Model/holidayModel');
 const path = require('path');
 const fs = require('fs');
 
-const dir = path.join(__dirname, '../public/images');
-console.log("holiday",dir);
 
-const upload = multer({
-    storage: multer.diskStorage({
-        destination: function (req, file, cb) {
-            if (!fs.existsSync(dir)) {
-                fs.mkdirSync(dir, { recursive: true });
-            }
-            cb(null, dir);
-        },
-        filename: function (req, file, cb) {
-            cb(null, file.originalname);
-        }
-    })
-});
+
 // http://localhost:8000/api/v1/holiday
 
 
@@ -40,30 +26,29 @@ exports.getHoliday = async (req, res) => {
 
 // http://localhost:8000/api/v1/createHoliday
 exports.createHoliday = [
-    upload.fields([
-        {name:"imageUrl", maxCount:1},
-        {name:"pdf", maxCount:1}]),
+    
     async (req, res) => {
         try {
+            const files = req.files || [];
             const { name, category, services } = req.body;
-            const imageUrl = req.files?.imageUrl ? `/images/${req.files['imageUrl'][0].filename}` : null;
-            const pdf = req.files?.pdf ? `/images/${req.files['pdf'][0].filename}` : null;
+            const imageFile = files.find(file => file.fieldname === 'imageUrl');
+            const pdfFile = files.find(file => file.fieldname === 'pdf');
             
-            if (!imageUrl || !pdf) {
+            if (!imageFile || !pdfFile) {
                 return res.status(400).json({
                     success: false,
-                    message: 'Image or PDF not uploaded',
+                    message: "Both image and PDF are required."
                 });
             }
 
-            if(!imageUrl) {
+            if(!imageFile) {
                 return res.status(400).json({
                     success: false,
                     message: 'Required fields are missing or image not uploaded'
                 });
             }
             
-            if(!pdf){
+            if(!pdfFile){
                 return res.status(400).json({
                     success:"false",
                     message:"pdf not uploade"
@@ -73,8 +58,8 @@ exports.createHoliday = [
                 name,
                 category: Array.isArray(category) ? category : [category],
                 services: Array.isArray(services) ? services : [services],
-                imageUrl,
-                pdf
+                imageUrl:imageFile.path,
+                pdf:pdfFile.path, 
             });
 
             await newHoliday.save();
@@ -127,6 +112,7 @@ catch(err){
 exports.deleteHoliday= async(req,res)=>{
     try {
         const id = req.params.id;
+       
         const deleteHoliday = await holidayModel.findByIdAndDelete({_id:id})
         res.status(201).json({
             success:true,

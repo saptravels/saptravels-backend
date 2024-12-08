@@ -2,22 +2,9 @@ const tourModel = require('../Model/tourModel');
 const path=require('path');
 const multer = require('multer');
 const fs = require('fs');
-const dir = path.join(__dirname, '../public/images');
-console.log(dir)
 
-const upload = multer({
-    storage: multer.diskStorage({
-        destination: function (req, file, cb) {
-            if (!fs.existsSync(dir)) {
-                fs.mkdirSync(dir, { recursive: true });
-            }
-            cb(null, dir);
-        },
-        filename: function (req, file, cb) {
-            cb(null, file.originalname);
-        }
-    })
-});
+
+
 // /api/vi/tour
 exports.getAllTour= async(req,res)=>{
     try{
@@ -39,62 +26,59 @@ exports.getAllTour= async(req,res)=>{
 }
 
 // /api/vi/createTour
-
 exports.createTour = [
-    upload.fields([
-        { name: "imageUrl", maxCount: 1 },
-        { name: "pdf", maxCount: 1 }
-    ]),
     async (req, res) => {
-        try {
-            const { name, numberOfPersons, services, category } = req.body;
-
-            // Ensure image and PDF file URLs are set correctly
-            const imageUrl = req.files?.imageUrl ? `/images/${req.files['imageUrl'][0].filename}` : null;
-            const pdf = req.files?.pdf ? `/images/${req.files['pdf'][0].filename}` : null;
-
-            // Check if files are uploaded
-            if (!imageUrl || !pdf) {
-                return res.status(400).json({
-                    success: false,
-                    message: 'Image or PDF not uploaded'
-                });
-            }
-
-          
-
-             const servicesArray=Array.isArray(services) ? services : [services];
-
-
-            // Convert `category` to an array if not already
-            const categoryArray = Array.isArray(category) ? category : [category];
-
-            // Create new tour object
-            const newTour = new tourModel({
-                name,
-                numberOfPersons,
-                imageUrl,
-                pdf,
-                services: servicesArray,
-                category: categoryArray
-            });
-
-            // Save the new tour to the database
-            await newTour.save();
-
-            // Send success response
-            res.status(200).json({
-                success: true,
-                tour: newTour
-            });
-        } catch (error) {
-            res.status(500).json({
-                success: false,
-                error: error.message
-            });
+      try {
+        const files = req.files || [];
+        const { name, numberOfPersons, services, category } = req.body;
+  
+        // Ensure image and PDF file URLs are set correctly
+        const imageFile = files.find(file => file.fieldname === 'imageUrl');
+        const pdfFile = files.find(file => file.fieldname === 'pdf');
+  
+        // Check if files are uploaded
+        if (!imageFile || !pdfFile) {
+          return res.status(400).json({
+            success: false,
+            message: "Both image and PDF are required."
+          });
         }
+  
+        // Convert `services` and `category` to arrays if not already
+        const servicesArray = Array.isArray(services) ? services : [services];
+        const categoryArray = Array.isArray(category) ? category : [category];
+  
+        // Create new tour object
+        const newTour = new tourModel({
+          name,
+          numberOfPersons,
+          imageUrl: imageFile.path,
+          pdf: pdfFile.path,
+          services: servicesArray,
+          category: categoryArray
+        });
+  
+        // Save the new tour to the database
+        await newTour.save();
+  
+        // Send success response
+        res.status(200).json({
+          success: true,
+          tour: newTour
+        });
+      } catch (error) {
+        console.error('Error creating tour:', error);
+        if (error.response && error.response.body) {
+          console.error('Cloudinary error:', error.response.body);
+        }
+        res.status(500).json({
+          success: false,
+          error: 'An error occurred while creating the tour.'
+        });
+      }
     }
-];
+  ];
+  
 
 
 // http://localhost:8000/api/v1/updateTour/id

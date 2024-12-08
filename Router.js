@@ -33,12 +33,12 @@ router.route('/login').post(Login)
 
 ///route foor getHolidayPackages
 router.route('/holiday').get(getHoliday);
-router.route('/createHoliday').post(createHoliday)
+router.post('/createHoliday',upload.any(),createHoliday)
 router.route('/updateHoliday/:id').put(updateHoliday);
 router.route('/deleteHoliday/:id').delete(deleteHoliday);
 ///route foor getTourPackage'
 router.route('/tour').get(getAllTour);
-router.route('/createTour').post(createTour);
+router.post('/createTour' ,upload.any(),createTour);
 router.route('/updateTour/:id').put(updateTour);
 router.route('/deleteTour/:id').delete(deleteTour);
 

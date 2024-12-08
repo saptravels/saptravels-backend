@@ -44,7 +44,7 @@ exports.createCar = async (req, res) => {
   try {
       const files = req.files || [];
       const { carModel, brand, price, seats, availability, description, category } = req.body;
-      console.log("body" , req.body)
+
 
       // Validate required fields
       if (!carModel || !brand || !price || !seats || !availability || !category) {
