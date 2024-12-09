@@ -9,10 +9,7 @@ const cors= require('cors');
 
 dotenv.config({path:path.join(__dirname,"config","config.env")})
 mongodbConnection();
-app.use(cors({
-    origin: '*', // Allows requests from all origins
-    credentials: true // Note: 'credentials' may not work with '*'
-}));
+app.use(cors());
 
 app.get('/hello', (req, res) => {
     res.send('Hello, World!');
